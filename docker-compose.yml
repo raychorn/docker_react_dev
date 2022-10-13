@@ -1,0 +1,19 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: react-cli
+    container_name: react-cli
+    volumes:
+      - .:/app
+    ports:
+      - "9998:8088"
+    environment:
+      - TZ=America/Denver
+    volumes:
+      - type: bind
+        source: /home/raychorn/.microservices/workspaces/nodejs
+        target: /workspaces/nodejs
+      - type: bind
+        source: ~/.ssh
+        target: /root/.ssh
