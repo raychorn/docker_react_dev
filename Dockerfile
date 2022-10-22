@@ -4,4 +4,4 @@ RUN npm install -g create-react-app \
                    react-native-cli
 RUN mkdir /app
 WORKDIR /app
-ADD . /app
+#ADD . /app

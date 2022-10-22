@@ -12,8 +12,8 @@ fi
 
 docker build -t react/cli .
 
-docker image tag react/cli:latest 10.0.0.164:5000/react-cli:latest
-docker push 10.0.0.164:5000/react-cli:latest
+docker image tag react/cli:latest 10.0.0.164:5000/react-cli:latest-1
+docker push 10.0.0.164:5000/react-cli:latest-1
 
 IMAGEID=$(docker images | grep react-cli | grep latest | awk '{print $3}')
 if [[ -z $IMAGEID ]]
